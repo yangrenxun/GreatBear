@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GreatBear.Dapper
+namespace GreatBear.Core
 {
     public class Class1
     {

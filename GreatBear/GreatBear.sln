@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28306.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.WebApi", "GreatBear.WebApi\GreatBear.WebApi.csproj", "{BFF8B99A-FBAC-4044-A50C-7FB7D1F7B8D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.WebApi", "GreatBear.WebApi\GreatBear.WebApi.csproj", "{BFF8B99A-FBAC-4044-A50C-7FB7D1F7B8D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.WebApp", "GreatBear.WebApp\GreatBear.WebApp.csproj", "{167BF3E5-D8A3-40C0-A9EC-DC72B09AAD45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.WebApp", "GreatBear.WebApp\GreatBear.WebApp.csproj", "{167BF3E5-D8A3-40C0-A9EC-DC72B09AAD45}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{94748EE1-D3A2-4522-A005-19FF8031C376}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreatBear.Core", "CreatBear.Core", "{4FBC8E15-3C2B-490C-BF5B-69561B551A85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.Dapper", "GreatBear.Dapper\GreatBear.Dapper.csproj", "{491E6F84-CE30-4E46-B9DE-F6051B650F5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Dapper", "GreatBear.Dapper\GreatBear.Dapper.csproj", "{491E6F84-CE30-4E46-B9DE-F6051B650F5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.Core.Tests", "GreatBear.Core.Tests\GreatBear.Core.Tests.csproj", "{5B856223-BE80-4261-9B9E-5EBB8EBB6A65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Core.Tests", "GreatBear.Core.Tests\GreatBear.Core.Tests.csproj", "{5B856223-BE80-4261-9B9E-5EBB8EBB6A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.Core", "GreatBear.Core\GreatBear.Core.csproj", "{F62CA0BD-420D-42D1-9110-4F801049C4FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{5B856223-BE80-4261-9B9E-5EBB8EBB6A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B856223-BE80-4261-9B9E-5EBB8EBB6A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B856223-BE80-4261-9B9E-5EBB8EBB6A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F62CA0BD-420D-42D1-9110-4F801049C4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F62CA0BD-420D-42D1-9110-4F801049C4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F62CA0BD-420D-42D1-9110-4F801049C4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F62CA0BD-420D-42D1-9110-4F801049C4FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{491E6F84-CE30-4E46-B9DE-F6051B650F5D} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
 		{5B856223-BE80-4261-9B9E-5EBB8EBB6A65} = {94748EE1-D3A2-4522-A005-19FF8031C376}
+		{F62CA0BD-420D-42D1-9110-4F801049C4FE} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9FE445AE-333D-4C83-87D9-156C2FE7846F}
