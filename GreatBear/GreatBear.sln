@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Dapper", "GreatBe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Core.Tests", "GreatBear.Core.Tests\GreatBear.Core.Tests.csproj", "{5B856223-BE80-4261-9B9E-5EBB8EBB6A65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.Core", "GreatBear.Core\GreatBear.Core.csproj", "{F62CA0BD-420D-42D1-9110-4F801049C4FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Core", "GreatBear.Core\GreatBear.Core.csproj", "{F62CA0BD-420D-42D1-9110-4F801049C4FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.Autofac", "GreatBear.Autofac\GreatBear.Autofac.csproj", "{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{F62CA0BD-420D-42D1-9110-4F801049C4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F62CA0BD-420D-42D1-9110-4F801049C4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F62CA0BD-420D-42D1-9110-4F801049C4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{491E6F84-CE30-4E46-B9DE-F6051B650F5D} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
 		{5B856223-BE80-4261-9B9E-5EBB8EBB6A65} = {94748EE1-D3A2-4522-A005-19FF8031C376}
 		{F62CA0BD-420D-42D1-9110-4F801049C4FE} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
+		{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9FE445AE-333D-4C83-87D9-156C2FE7846F}

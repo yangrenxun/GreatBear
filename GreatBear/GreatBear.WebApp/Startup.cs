@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using GreatBear.Core;
+using GreatBear.Autofac;
+using GreatBear.Dapper;
 
 namespace GreatBear.WebApp
 {
@@ -21,7 +24,7 @@ namespace GreatBear.WebApp
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -32,6 +35,15 @@ namespace GreatBear.WebApp
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            return services.AddDefaultProvider(
+                options =>
+                {
+                    options.UseAutofac();
+                    options.UseDapper();
+                    //options.AddSimpleDemoCore();
+                    //options.AddSimpleDemoApplication();
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

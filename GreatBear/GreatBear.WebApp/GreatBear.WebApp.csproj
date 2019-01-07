@@ -7,6 +7,13 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GreatBear.Autofac\GreatBear.Autofac.csproj" />
+    <ProjectReference Include="..\GreatBear.Core\GreatBear.Core.csproj" />
+    <ProjectReference Include="..\GreatBear.Dapper\GreatBear.Dapper.csproj" />
   </ItemGroup>
 
 </Project>
