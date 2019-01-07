@@ -1,4 +1,4 @@
-*.chtml linguist-language=csharp
+# *.chtml linguist-language=csharp
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
