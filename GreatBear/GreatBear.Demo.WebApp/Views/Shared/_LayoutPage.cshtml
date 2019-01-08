@@ -1,0 +1,51 @@
+﻿
+@{
+    var pageTitle = ViewBag.Title;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@pageTitle | </title>
+    <link href="/Administration/Styles/bootstrap.min.css" rel="stylesheet">
+    <link href="/Administration/Styles/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Administration/Styles/nprogress.css" rel="stylesheet">
+    <link href="/Administration/Styles/custom.min.css" rel="stylesheet">
+
+    <script src="/Administration/Scripts/jquery.min.js"></script>
+    <script src="/Administration/Scripts/bootstrap.min.js"></script>
+    <script src="/Administration/Scripts/jquery.validate.min.js"></script>
+    <script src="/Administration/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="/Realtime/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="/Realtime/Scripts/testChat.js"></script>
+</head>
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            @Html.PartialAsync("~/Administration/Views/Shared/_LeftMenu.cshtml")
+            <!-- top navigation -->
+            @Html.PartialAsync("~/Administration/Views/Shared/_TopNav.cshtml")
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="">
+                    @RenderBody()
+                </div>
+            </div>
+            <!-- /page content -->
+            <!-- footer content -->
+            @Html.PartialAsync("~/Administration/Views/Shared/_Footer.cshtml")
+            <!-- /footer content -->
+        </div>
+    </div>
+    @Html.PartialAsync("~/Administration/Views/Shared/Modal.cshtml")
+    <script src="/Administration/Scripts/fastclick.js"></script>
+    <script src="/Administration/Scripts/nprogress.js"></script>
+    <script src="/Administration/Scripts/custom.js"></script>
+</body>
+</html>

@@ -10,9 +10,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using GreatBear.Core;
 using GreatBear.Autofac;
+using GreatBear.AutoMapper;
 using GreatBear.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using GreatBear.Demo.EFCore;
+using GreatBear.Demo.Application;
 //using GreatBear.Dapper;
 
 namespace GreatBear.WebApp
@@ -53,6 +55,7 @@ namespace GreatBear.WebApp
                 {
                     options.UseAutofac();
                     options.UseEfCore();
+                    options.AddDemoApplication();
                 });
         }
 
@@ -67,6 +70,12 @@ namespace GreatBear.WebApp
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseDefaultApp(
+                options =>
+                {
+                    options.UseAutoMapper();
+                });
 
             app.UseStaticFiles();
             app.UseCookiePolicy();

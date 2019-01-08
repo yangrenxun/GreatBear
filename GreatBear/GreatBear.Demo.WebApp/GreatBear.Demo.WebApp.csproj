@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\GreatBear.Autofac\GreatBear.Autofac.csproj" />
     <ProjectReference Include="..\GreatBear.Core\GreatBear.Core.csproj" />
+    <ProjectReference Include="..\GreatBear.Demo.Application\GreatBear.Demo.Application.csproj" />
     <ProjectReference Include="..\GreatBear.Demo.EFCore\GreatBear.Demo.EFCore.csproj" />
   </ItemGroup>
 

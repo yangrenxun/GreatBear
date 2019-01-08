@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GreatBear.AutoMapper\GreatBear.AutoMapper.csproj" />
+    <ProjectReference Include="..\GreatBear.Demo.Entities\GreatBear.Demo.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
