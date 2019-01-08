@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28306.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.WebApi", "GreatBear.WebApi\GreatBear.WebApi.csproj", "{BFF8B99A-FBAC-4044-A50C-7FB7D1F7B8D1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.WebApp", "GreatBear.WebApp\GreatBear.WebApp.csproj", "{167BF3E5-D8A3-40C0-A9EC-DC72B09AAD45}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{94748EE1-D3A2-4522-A005-19FF8031C376}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreatBear.Core", "CreatBear.Core", "{4FBC8E15-3C2B-490C-BF5B-69561B551A85}"
@@ -17,7 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Core.Tests", "Gre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Core", "GreatBear.Core\GreatBear.Core.csproj", "{F62CA0BD-420D-42D1-9110-4F801049C4FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.Autofac", "GreatBear.Autofac\GreatBear.Autofac.csproj", "{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Autofac", "GreatBear.Autofac\GreatBear.Autofac.csproj", "{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.EntityFramework", "GreatBear.EntityFramework\GreatBear.EntityFramework.csproj", "{158A4BF1-8D78-4B64-83C3-069012322D55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Demo.WebApi", "GreatBear.Demo.WebApi\GreatBear.Demo.WebApi.csproj", "{C73168E5-8473-4595-84FF-1BE10C549BE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Demo.EFCore", "GreatBear.Demo.EFCore\GreatBear.Demo.EFCore.csproj", "{8D279594-F7A2-405D-99ED-13A69278519C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Demo.WebApp", "GreatBear.Demo.WebApp\GreatBear.Demo.WebApp.csproj", "{036E3E16-600A-4752-9849-C10BA05ECA82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.Demo.Entities", "GreatBear.Demo.Entities\GreatBear.Demo.Entities.csproj", "{D63D6F9F-F289-4611-8CE1-B049FB066F56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BFF8B99A-FBAC-4044-A50C-7FB7D1F7B8D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFF8B99A-FBAC-4044-A50C-7FB7D1F7B8D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFF8B99A-FBAC-4044-A50C-7FB7D1F7B8D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFF8B99A-FBAC-4044-A50C-7FB7D1F7B8D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{167BF3E5-D8A3-40C0-A9EC-DC72B09AAD45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{167BF3E5-D8A3-40C0-A9EC-DC72B09AAD45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{167BF3E5-D8A3-40C0-A9EC-DC72B09AAD45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{167BF3E5-D8A3-40C0-A9EC-DC72B09AAD45}.Release|Any CPU.Build.0 = Release|Any CPU
 		{491E6F84-CE30-4E46-B9DE-F6051B650F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{491E6F84-CE30-4E46-B9DE-F6051B650F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{491E6F84-CE30-4E46-B9DE-F6051B650F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,6 +47,26 @@ Global
 		{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158A4BF1-8D78-4B64-83C3-069012322D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158A4BF1-8D78-4B64-83C3-069012322D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158A4BF1-8D78-4B64-83C3-069012322D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158A4BF1-8D78-4B64-83C3-069012322D55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C73168E5-8473-4595-84FF-1BE10C549BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73168E5-8473-4595-84FF-1BE10C549BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C73168E5-8473-4595-84FF-1BE10C549BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C73168E5-8473-4595-84FF-1BE10C549BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D279594-F7A2-405D-99ED-13A69278519C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D279594-F7A2-405D-99ED-13A69278519C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D279594-F7A2-405D-99ED-13A69278519C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D279594-F7A2-405D-99ED-13A69278519C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036E3E16-600A-4752-9849-C10BA05ECA82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036E3E16-600A-4752-9849-C10BA05ECA82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036E3E16-600A-4752-9849-C10BA05ECA82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036E3E16-600A-4752-9849-C10BA05ECA82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D63D6F9F-F289-4611-8CE1-B049FB066F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63D6F9F-F289-4611-8CE1-B049FB066F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D63D6F9F-F289-4611-8CE1-B049FB066F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D63D6F9F-F289-4611-8CE1-B049FB066F56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +76,7 @@ Global
 		{5B856223-BE80-4261-9B9E-5EBB8EBB6A65} = {94748EE1-D3A2-4522-A005-19FF8031C376}
 		{F62CA0BD-420D-42D1-9110-4F801049C4FE} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
 		{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
+		{158A4BF1-8D78-4B64-83C3-069012322D55} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9FE445AE-333D-4C83-87D9-156C2FE7846F}

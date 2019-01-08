@@ -5,12 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="1.50.5" />
-    <PackageReference Include="DapperExtensions.DotnetCore" Version="1.0.1" />
-    <PackageReference Include="MySql.Data" Version="8.0.13" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GreatBear.Core\GreatBear.Core.csproj" />
   </ItemGroup>
 

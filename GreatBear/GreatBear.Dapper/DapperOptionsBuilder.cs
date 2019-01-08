@@ -1,11 +1,13 @@
 ﻿using DapperExtensions.Mapper;
 using DapperExtensions.Sql;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Reflection;
 using System.Text;
+using Dapper;
 
 namespace GreatBear.Dapper
 {
@@ -50,7 +52,17 @@ namespace GreatBear.Dapper
             {
                 return new SqlConnection(connectionString);
             };
+
             SqlDialect = new SqlServerDialect();
+        }
+
+        public void UseMySql(string connectionString)
+        {
+            GetDbConnection = () =>
+            {
+                return new MySqlConnection(connectionString);
+            };
+            SqlDialect = new MySqlDialect();
         }
     }
 }

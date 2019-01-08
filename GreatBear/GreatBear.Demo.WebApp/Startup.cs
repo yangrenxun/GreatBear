@@ -10,7 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using GreatBear.Core;
 using GreatBear.Autofac;
-using GreatBear.Dapper;
+using GreatBear.EntityFramework;
+using Microsoft.EntityFrameworkCore;
+using GreatBear.Demo.EFCore;
+//using GreatBear.Dapper;
 
 namespace GreatBear.WebApp
 {
@@ -35,14 +38,21 @@ namespace GreatBear.WebApp
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            
+            services.AddDbContext<DbContextBase, EfDbContext>(
+                options =>
+                {
+                    options.UseMySQL(Configuration.GetConnectionString("Default"));
+                    //options.UseSqlServer(
+                    //    Configuration.GetConnectionString("Default"),
+                    //    option => option.UseRowNumberForPaging());
+                });
 
             return services.AddDefaultProvider(
                 options =>
                 {
                     options.UseAutofac();
-                    options.UseDapper();
-                    //options.AddSimpleDemoCore();
-                    //options.AddSimpleDemoApplication();
+                    options.UseEfCore();
                 });
         }
 
