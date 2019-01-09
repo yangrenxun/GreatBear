@@ -3,12 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Creekdream.AutoMapper
+namespace GreatBear.AutoMapper
 {
     /// <summary>
     /// Use Automapper mapping
     /// </summary>
-    public class AutoMapperObjectMapper : IObjectMapper
+    public class AutoMapperObjectMapper : GreatBear.AutoMapper.IObjectMapper
     {
         private readonly IMapper _mapper;
 

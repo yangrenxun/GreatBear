@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using GreatBear.Core;
 using GreatBear.Autofac;
 using GreatBear.AutoMapper;
+using AutoMapper;
 using GreatBear.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using GreatBear.Demo.EFCore;
@@ -40,7 +41,10 @@ namespace GreatBear.WebApp
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            
+
+            services.AddAutoMapper();
+
+
             services.AddDbContext<DbContextBase, EfDbContext>(
                 options =>
                 {
@@ -71,11 +75,7 @@ namespace GreatBear.WebApp
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseDefaultApp(
-                options =>
-                {
-                    options.UseAutoMapper();
-                });
+            app.UseDefaultApp();
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
