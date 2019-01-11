@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Demo.WebApp", "Gr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Demo.Entities", "GreatBear.Demo.Entities\GreatBear.Demo.Entities.csproj", "{D63D6F9F-F289-4611-8CE1-B049FB066F56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.Demo.Application", "GreatBear.Demo.Application\GreatBear.Demo.Application.csproj", "{69E3228D-959B-46A1-99A3-6B0F5BC0A0F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Demo.Application", "GreatBear.Demo.Application\GreatBear.Demo.Application.csproj", "{69E3228D-959B-46A1-99A3-6B0F5BC0A0F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.AutoMapper", "GreatBear.AutoMapper\GreatBear.AutoMapper.csproj", "{9DF9F6C6-95E8-4824-B4AB-5DF4F0185848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.MediatR", "GreatBear.MediatR\GreatBear.MediatR.csproj", "{06F922F8-92B0-4085-A3A6-25C0C8F8E609}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{9DF9F6C6-95E8-4824-B4AB-5DF4F0185848}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DF9F6C6-95E8-4824-B4AB-5DF4F0185848}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DF9F6C6-95E8-4824-B4AB-5DF4F0185848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F922F8-92B0-4085-A3A6-25C0C8F8E609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F922F8-92B0-4085-A3A6-25C0C8F8E609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F922F8-92B0-4085-A3A6-25C0C8F8E609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F922F8-92B0-4085-A3A6-25C0C8F8E609}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +96,7 @@ Global
 		{BA21B30A-31C0-434A-BAA5-7FD0B6B4195F} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
 		{158A4BF1-8D78-4B64-83C3-069012322D55} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
 		{9DF9F6C6-95E8-4824-B4AB-5DF4F0185848} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
+		{06F922F8-92B0-4085-A3A6-25C0C8F8E609} = {4FBC8E15-3C2B-490C-BF5B-69561B551A85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9FE445AE-333D-4C83-87D9-156C2FE7846F}
