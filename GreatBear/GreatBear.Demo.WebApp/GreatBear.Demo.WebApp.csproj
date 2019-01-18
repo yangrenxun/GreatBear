@@ -8,6 +8,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,6 +16,7 @@
     <ProjectReference Include="..\GreatBear.Core\GreatBear.Core.csproj" />
     <ProjectReference Include="..\GreatBear.Demo.Application\GreatBear.Demo.Application.csproj" />
     <ProjectReference Include="..\GreatBear.Demo.EFCore\GreatBear.Demo.EFCore.csproj" />
+    <ProjectReference Include="..\GreatBear.Log4net\GreatBear.Log4net.csproj" />
   </ItemGroup>
 
 </Project>
