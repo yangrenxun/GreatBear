@@ -20,7 +20,7 @@ using Microsoft.Extensions.Logging;
 using GreatBear.Log4net;
 //using GreatBear.Dapper;
 
-namespace GreatBear.WebApp
+namespace GreatBear.Demo.WebApp
 {
     public class Startup
     {
@@ -40,14 +40,25 @@ namespace GreatBear.WebApp
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
+            services.AddAuthentication().AddCookie("Member", "Member", options =>
+            {
+                options.SlidingExpiration = true;
+                options.ExpireTimeSpan = TimeSpan.FromHours(1);
+                options.Cookie.Expiration = TimeSpan.FromHours(1);
+                options.LoginPath = "/Account/Login";
+            })
+            .AddCookie("Admin", "Admin", options =>
+            {
+                options.SlidingExpiration = true;
+                options.ExpireTimeSpan = TimeSpan.FromHours(1);
+                options.Cookie.Expiration = TimeSpan.FromHours(1);
+                options.LoginPath = "/Admin/Account/Login";
+            });
             services.AddAutoMapper();
 
-            services.AddLogging();
-            //services.AddIdentity<,>();
 
 
             services.AddDbContext<DbContextBase, EfDbContext>(
@@ -94,6 +105,10 @@ namespace GreatBear.WebApp
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapRoute(
+                    name: "area",
+                    template: "{area:exists}/{controller=Default}/{action=Index}/{id?}");
             });
         }
     }

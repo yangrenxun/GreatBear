@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace GreatBear.WebApp
+namespace GreatBear.Demo.WebApp
 {
     public class Program
     {

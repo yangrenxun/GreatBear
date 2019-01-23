@@ -4,19 +4,19 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using GreatBear.WebApp.Models;
+using GreatBear.Demo.WebApp.Models;
 using GreatBear.Demo.Entities.User;
 using GreatBear.Demo.Application.Users.Dto;
 using AutoMapper;
 using Microsoft.Extensions.Logging;
 
-namespace GreatBear.WebApp.Controllers
+namespace GreatBear.Demo.WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger _logger;
+        private readonly ILogger<HomeController> _logger;
         private readonly IMapper _mapper;
-        public HomeController(IMapper mapper, ILogger logger)
+        public HomeController(IMapper mapper, ILogger<HomeController> logger)
         {
             _logger = logger;
             _mapper = mapper;
@@ -24,6 +24,14 @@ namespace GreatBear.WebApp.Controllers
         public IActionResult Index()
         {
             _logger.LogError("哈哈，我错了");
+            try {
+                int a = 0;
+                int b = 5 / a;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "出错了");
+            }
             return View();
         }
 

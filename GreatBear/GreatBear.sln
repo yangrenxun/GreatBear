@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.AutoMapper", "Gre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.MediatR", "GreatBear.MediatR\GreatBear.MediatR.csproj", "{06F922F8-92B0-4085-A3A6-25C0C8F8E609}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatBear.Log4net", "GreatBear.Log4net\GreatBear.Log4net.csproj", "{1C92D986-65DE-46CF-8EFC-606A3115D5C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatBear.Log4net", "GreatBear.Log4net\GreatBear.Log4net.csproj", "{1C92D986-65DE-46CF-8EFC-606A3115D5C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

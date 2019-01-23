@@ -1,6 +1,6 @@
 using System;
 
-namespace GreatBear.WebApp.Models
+namespace GreatBear.Demo.WebApp.Models
 {
     public class ErrorViewModel
     {
