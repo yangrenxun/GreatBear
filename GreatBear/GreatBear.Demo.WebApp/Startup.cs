@@ -43,19 +43,21 @@ namespace GreatBear.Demo.WebApp
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddAuthentication().AddCookie("Member", "Member", options =>
+            services.AddAuthentication().AddCookie(MemberAttribute.AuthenticationScheme, options =>
             {
                 options.SlidingExpiration = true;
                 options.ExpireTimeSpan = TimeSpan.FromHours(1);
                 options.Cookie.Expiration = TimeSpan.FromHours(1);
                 options.LoginPath = "/Account/Login";
+                options.LogoutPath = "/Account/Logout";
             })
-            .AddCookie("Admin", "Admin", options =>
+            .AddCookie(AdminAttribute.AuthenticationScheme, options =>
             {
                 options.SlidingExpiration = true;
                 options.ExpireTimeSpan = TimeSpan.FromHours(1);
                 options.Cookie.Expiration = TimeSpan.FromHours(1);
                 options.LoginPath = "/Admin/Account/Login";
+                options.LogoutPath = "/Admin/Account/Logout";
             });
             services.AddAutoMapper();
 

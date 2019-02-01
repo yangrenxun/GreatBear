@@ -8,9 +8,10 @@ namespace GreatBear.Demo.WebApp
 {
     public class MemberAttribute : AuthorizeAttribute
     {
+        public const string AuthenticationScheme = "MemberScheme";
         public MemberAttribute()
         {
-            base.AuthenticationSchemes = "Member";
+            base.AuthenticationSchemes = AuthenticationScheme;
         }
     }
 }

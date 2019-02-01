@@ -23,15 +23,6 @@ namespace GreatBear.Demo.WebApp.Controllers
         }
         public IActionResult Index()
         {
-            _logger.LogError("哈哈，我错了");
-            try {
-                int a = 0;
-                int b = 5 / a;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "出错了");
-            }
             return View();
         }
 

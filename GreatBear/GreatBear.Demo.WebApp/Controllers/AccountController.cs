@@ -15,16 +15,25 @@ namespace GreatBear.Demo.WebApp.Controllers
     {
         public IActionResult Index()
         {
-            var a = HttpContext.AuthenticateAsync();
-            //HttpContext.SignInAsync();
             return View();
         }
 
         [AllowAnonymous]
         public IActionResult Login()
         {
-            var a = HttpContext.AuthenticateAsync();
-            //HttpContext.SignInAsync();
+
+            return View();
+        }
+
+        public IActionResult Logout()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult Register()
+        {
+
             return View();
         }
     }
