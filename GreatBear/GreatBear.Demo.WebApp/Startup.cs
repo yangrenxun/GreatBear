@@ -42,7 +42,7 @@ namespace GreatBear.Demo.WebApp
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddAuthentication().AddCookie(MemberAttribute.AuthenticationScheme, options =>
             {
                 options.SlidingExpiration = true;
