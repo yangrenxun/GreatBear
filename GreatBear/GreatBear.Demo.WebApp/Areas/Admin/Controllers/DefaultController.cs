@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace GreatBear.Demo.WebApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Admin]
+    //[Admin]
     public class DefaultController : Controller
     {
         public IActionResult Index()
