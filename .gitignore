@@ -260,3 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 /GreatBear/GreatBear.Demo.WebApp/Logs
+*.pyc
+/GreatBear/GreatBear.Demo.WebApp/Properties/PublishProfiles/FolderProfile.pubxml
