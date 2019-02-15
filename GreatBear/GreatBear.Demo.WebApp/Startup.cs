@@ -18,6 +18,9 @@ using GreatBear.Demo.EFCore;
 using GreatBear.Demo.Application;
 using Microsoft.Extensions.Logging;
 using GreatBear.Log4net;
+using FluentValidation.AspNetCore;
+using GreatBear.Demo.Application.Validators;
+using GreatBear.Demo.Application.Validators.Users;
 //using GreatBear.Dapper;
 
 namespace GreatBear.Demo.WebApp
@@ -42,7 +45,12 @@ namespace GreatBear.Demo.WebApp
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddFluentValidation(fv=> {
+                    fv.RegisterValidatorsFromAssemblyContaining<UserModelValidator>();
+                    fv.ImplicitlyValidateChildProperties = true;
+                });
+
             services.AddAuthentication().AddCookie(MemberAttribute.AuthenticationScheme, options =>
             {
                 options.SlidingExpiration = true;

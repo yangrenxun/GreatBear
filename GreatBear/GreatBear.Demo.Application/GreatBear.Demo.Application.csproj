@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GreatBear.AutoMapper\GreatBear.AutoMapper.csproj" />
     <ProjectReference Include="..\GreatBear.Demo.Entities\GreatBear.Demo.Entities.csproj" />
   </ItemGroup>

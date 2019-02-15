@@ -9,6 +9,8 @@ using GreatBear.Demo.Entities.User;
 using GreatBear.Demo.Application.Users.Dto;
 using AutoMapper;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
+using GreatBear.Demo.Application.Users;
 
 namespace GreatBear.Demo.WebApp.Controllers
 {
@@ -23,6 +25,8 @@ namespace GreatBear.Demo.WebApp.Controllers
         }
         public IActionResult Index()
         {
+            var service = HttpContext.RequestServices.GetService<IUserService>();
+
             return View();
         }
 

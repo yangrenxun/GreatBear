@@ -1,0 +1,13 @@
+﻿@model GreatBear.Demo.WebApp.Areas.Admin.Models.Users.UserListModel
+
+<a class="btn btn-primary btn-sm" href="@Url.Action("CreateUser","Account")"><i class="fa fa-plus"></i> 添加产品</a>
+
+@foreach (var item in Model.Datas)
+{
+    <li><span>@item.UserName</span><strong>@item.Password</strong></li>
+}
+
+
+<div class="pager">
+    @Html.Pager(Model)
+</div>
