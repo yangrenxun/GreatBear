@@ -35,6 +35,12 @@ namespace GreatBear.Demo.EFCore
             base.OnModelCreating(modelBuilder);
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            string str = "data source=.; Initial Catalog=GreatBear ; uid=sa; pwd=123456";
+            optionsBuilder.UseSqlServer(str);
+        }
+
         public override void Dispose()
         {
             base.Dispose();

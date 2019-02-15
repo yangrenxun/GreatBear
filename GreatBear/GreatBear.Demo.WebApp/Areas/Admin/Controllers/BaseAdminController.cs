@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace GreatBear.Demo.WebApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Admin]
     public abstract partial class BaseAdminController : Controller
     {
 

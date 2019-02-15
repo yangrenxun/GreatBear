@@ -11,6 +11,7 @@ namespace GreatBear.Demo.Application.Validators.Users
         public UserModelValidator()
         {
             RuleFor(x=>x.UserName).NotEmpty().WithMessage("不能为空");
+            RuleFor(x => x.Password).NotEmpty().WithMessage("不能为空");
             RuleFor(x => x.Phone).Length(11).WithMessage("必须11位");
         }
     }

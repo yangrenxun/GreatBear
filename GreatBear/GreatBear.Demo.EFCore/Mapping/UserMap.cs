@@ -11,7 +11,7 @@ namespace GreatBear.Demo.EFCore.Mapping
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.ToTable("User");
+            builder.ToTable(nameof(User));
             builder.HasKey(x=>x.Id);
         }
     }

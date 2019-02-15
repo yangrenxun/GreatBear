@@ -11,8 +11,8 @@ namespace GreatBear.Demo.Application.MapperProfiles
     {
         public UserProfile()
         {
-            CreateMap<User, GetUserOutput>();
-            CreateMap<GetUserOutput, User>();
+            CreateMap<User, UserModel>();
+            CreateMap<UserModel, User>();
         }
     }
 }

@@ -87,6 +87,7 @@ namespace GreatBear.Demo.WebApp
                     options.UseEfCore();
                     options.AddLog4net();
                     options.AddDemoApplication();
+                    options.AddWebApp();
                 });
         }
 

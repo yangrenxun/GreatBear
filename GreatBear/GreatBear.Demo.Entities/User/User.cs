@@ -6,46 +6,29 @@ using System.Text;
 
 namespace GreatBear.Demo.Entities.User
 {
-    public class User : Entity, IHasModificationTime, IHasCreationTime
+    public class User : Entity
     {
-        public const int MaxUserNameLength = 50;
-        public const int MinUserNameLength = 1;
-        public const int MaxPasswordLength = 50;
-        public const int MinPasswordLength = 6;
+        public string UserName { get; set; }
 
-        /// <summary>
-        /// Username for login
-        /// </summary>
-        [Required]
-        [StringLength(MaxUserNameLength, MinimumLength = MinUserNameLength)]
-        public virtual string UserName { get; set; }
+        public string Password { get; set; }
 
+        public string PasswordSalt { get; set; }
+
+        public string RealName { get; set; }
+
+        public string Phone { get; set; }
+
+        public string Email { get; set; }
         /// <summary>
-        /// User password for login
+        /// Creation time of this user.
         /// </summary>
-        [Required]
-        [StringLength(MaxPasswordLength, MinimumLength = MinPasswordLength)]
-        public virtual string Password { get; set; }
+        public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// The last modified time for this user.
         /// </summary>
-        public virtual DateTime? LastModificationTime { get; set; }
+        public DateTime? LastModifyTime { get; set; }
 
-        /// <summary>
-        /// Creation time of this user.
-        /// </summary>
-        public virtual DateTime CreationTime { get; set; }
-
-        ///// <summary>
-        ///// User information owned
-        ///// </summary>
-        //public virtual UserInfo UserInfo { get; set; }
-
-        ///// <summary>
-        ///// Book collection owned by the user
-        ///// </summary>
-        //[InverseProperty(nameof(Book.User))]
-        //public virtual ICollection<Book> Books { get; set; }
+        public DateTime? LastLoginTime { get; set; }
     }
 }
