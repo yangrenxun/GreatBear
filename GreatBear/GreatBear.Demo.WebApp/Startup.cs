@@ -71,7 +71,7 @@ namespace GreatBear.Demo.WebApp
 
 
 
-            services.AddDbContext<DbContextBase, EfDbContext>(
+            services.AddDbContext<DbContext, EfDbContext>(
                 options =>
                 {
                     //options.UseMySQL(Configuration.GetConnectionString("Default"));

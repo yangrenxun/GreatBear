@@ -1,4 +1,5 @@
-﻿using GreatBear.EntityFramework;
+﻿using GreatBear.Demo.EFCore.Mapping;
+using GreatBear.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
@@ -9,35 +10,30 @@ namespace GreatBear.Demo.EFCore
     /// <summary>
     /// Data access context
     /// </summary>
-    public class EfDbContext : DbContextBase
+    public class EfDbContext : DbContext
     {
-        private readonly string _id;
-
         public EfDbContext(DbContextOptions<EfDbContext> options)
             : base(options)
         {
-            _id = Guid.NewGuid().ToString();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var typesToRegister = Assembly.GetExecutingAssembly().GetTypes()
-           .Where(type => !String.IsNullOrEmpty(type.Namespace))
-           .Where(type => type.BaseType != null && type.BaseType.IsGenericType && type.BaseType.GetGenericTypeDefinition() == typeof(IEntityTypeConfiguration<>));
-            foreach (var type in typesToRegister)
+            var types = Assembly.GetExecutingAssembly().GetTypes().Where(type=> type.GetInterfaces().Any(i=> i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEntityTypeConfiguration<>)));
+            foreach (var type in types)
             {
                 dynamic configurationInstance = Activator.CreateInstance(type);
                 modelBuilder.ApplyConfiguration(configurationInstance);
             }
             //...or do it manually below. For example,
-            //modelBuilder.Configurations.Add(new LanguageMap());
+            //modelBuilder.ApplyConfiguration(new UserMap());
 
             base.OnModelCreating(modelBuilder);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string str = "data source=.; Initial Catalog=GreatBear ; uid=sa; pwd=123456";
+            string str = "data source=.;Initial Catalog=GreatBear;uid=sa;pwd=123456";
             optionsBuilder.UseSqlServer(str);
         }
 

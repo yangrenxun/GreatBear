@@ -1,4 +1,5 @@
-﻿using GreatBear.AutoMapper;
+﻿using AutoMapper;
+using GreatBear.AutoMapper;
 using GreatBear.Core.Application.Service;
 using GreatBear.Core.Domain.Repositories;
 using GreatBear.Core.Mvc.Paging;
@@ -18,12 +19,14 @@ namespace GreatBear.Demo.Application.Users
     {
         private readonly IRepository<User, int> _userRepository;
         private readonly IEncryptionService _encryptionService;
+        private readonly IMapper _mapper;
 
         /// <inheritdoc />
-        public UserService(IRepository<User, int> userRepository, IEncryptionService encryptionService)
+        public UserService(IRepository<User, int> userRepository, IEncryptionService encryptionService, IMapper mapper)
         {
             _userRepository = userRepository;
             _encryptionService = encryptionService;
+            _mapper = mapper;
         }
 
         public IPagedList<User> PageList(int pageIndex, int pageSize, Expression<Func<User, bool>> otherPredicate)
@@ -65,7 +68,7 @@ namespace GreatBear.Demo.Application.Users
             if (string.IsNullOrEmpty(username))
                 return false;
 
-            var user = _userRepository.FirstOrDefaultAsync(x => x.UserName == username);
+            var user = _userRepository.FirstOrDefault(x => x.UserName == username);
             if (user != null)
                 return true;
 
@@ -75,7 +78,7 @@ namespace GreatBear.Demo.Application.Users
         /// <inheritdoc />
         public User CreateUser(UserModel model)
         {
-            var user = model.MapTo<User>();
+            var user = _mapper.Map<User>(model);
 
             user.CreateTime = DateTime.Now;
             var saltKey = _encryptionService.CreateSaltKey(5);

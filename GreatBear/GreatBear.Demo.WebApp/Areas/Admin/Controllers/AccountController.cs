@@ -23,8 +23,7 @@ namespace GreatBear.Demo.WebApp.Areas.Admin.Controllers
             _userService = userService;
             _authenticationService = authenticationService;
         }
-
-        [AllowAnonymous]
+        
         public IActionResult Index(UserListModel model)
         {
             List<User> users = new List<User>();
@@ -53,12 +52,12 @@ namespace GreatBear.Demo.WebApp.Areas.Admin.Controllers
         [HttpGet, AllowAnonymous]
         public IActionResult Login()
         {
-            LoginModel model = new LoginModel();
+            UserModel model = new UserModel();
             return View(model);
         }
 
         [HttpPost, AllowAnonymous]
-        public IActionResult Login(LoginModel model)
+        public IActionResult Login(UserModel model)
         {
             var validate = _userService.ValidateUser(model.UserName,model.Password);
             if (validate)
@@ -80,14 +79,14 @@ namespace GreatBear.Demo.WebApp.Areas.Admin.Controllers
             return RedirectToAction("Login");
         }
 
-        [HttpGet, AllowAnonymous]
+        [HttpGet]
         public IActionResult CreateUser()
         {
             UserModel model = new UserModel();
             return View(model);
         }
 
-        [HttpPost,AllowAnonymous]
+        [HttpPost]
         public IActionResult CreateUser(UserModel model)
         {
             var check = _userService.CheckExistUserName(model.UserName);

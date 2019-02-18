@@ -1,4 +1,5 @@
 ﻿using GreatBear.Core.Dependency;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace GreatBear.EntityFramework
         /// <summary>
         /// Get data context operation object
         /// </summary>
-        DbContextBase GetDbContext();
+        DbContext GetDbContext();
 
         /// <summary>
         /// DbContext transaction

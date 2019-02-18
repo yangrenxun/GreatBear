@@ -1,5 +1,6 @@
 ﻿using GreatBear.Core.Dependency;
 using GreatBear.Core.Threading;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace GreatBear.EntityFramework
     {
         private class LocalDbContextWapper
         {
-            public DbContextBase DbContext { get; set; }
+            public DbContext DbContext { get; set; }
 
             public IDbContextTransaction DbContextTransaction { get; set; }
         }
@@ -28,14 +29,14 @@ namespace GreatBear.EntityFramework
         }
 
         /// <inheritdoc />
-        public DbContextBase GetDbContext()
+        public DbContext GetDbContext()
         {
             var localDbContext = _asyncLocalObjectProvider.GetCurrent<LocalDbContextWapper>();
-            if (localDbContext == null || localDbContext.DbContext == null || localDbContext.DbContext.IsDisposed)
+            if (localDbContext == null || localDbContext.DbContext == null)
             {
                 localDbContext = new LocalDbContextWapper()
                 {
-                    DbContext = _iocResolver.Resolve<DbContextBase>()
+                    DbContext = _iocResolver.Resolve<DbContext>()
                 };
                 _asyncLocalObjectProvider.SetCurrent(localDbContext);
             }
